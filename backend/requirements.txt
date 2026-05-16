@@ -1,0 +1,28 @@
+# BeanHealth CLR Tool — Backend Dependencies
+# Python 3.11+
+
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# Computer Vision
+# NOTE: mediapipe 0.10.x pulls opencv-contrib-python as a dependency.
+# Do NOT also pin opencv-python-headless — both installing cv2 causes a
+# conflict that crashes the server on startup. Let mediapipe own cv2.
+mediapipe==0.10.14
+numpy==1.26.4
+
+# Image processing
+Pillow==10.3.0
+
+# Data validation
+pydantic==2.7.1
+
+# Testing
+pytest==8.2.0
+pytest-asyncio==0.23.6
+httpx==0.27.0
+
+# Utilities
+python-dotenv==1.0.1
